@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://27i8urbx343x"]
+
+[ext_resource type="Script" uid="uid://etai1swg6gpm" path="res://gear_up.gd" id="1_nexof"]
+[ext_resource type="Texture2D" uid="uid://bdnqso2ltwwl7" path="res://circulo.svg" id="2_ypd1j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xd8u2"]
+radius = 61.204575
+
+[node name="Circulo" type="Node2D"]
+
+[node name="circulo" type="CharacterBody2D" parent="."]
+collision_layer = 2
+input_pickable = true
+slide_on_ceiling = false
+safe_margin = 1.0
+script = ExtResource("1_nexof")
+
+[node name="Sprite2D" type="Sprite2D" parent="circulo"]
+rotation = 0.000653767
+texture = ExtResource("2_ypd1j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="circulo"]
+shape = SubResource("CircleShape2D_xd8u2")
